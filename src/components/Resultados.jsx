@@ -8,8 +8,8 @@ function Resultados() {
   useEffect(() => {
     const consultarApi = async () => {
       try {
-        const API_KEY = "AIzaSyCATEYlOy9S409UZl2Dv9jHzm6nzSao91U";
-        const API_VIDEO = "https://www.googleapis.com/youtube/v3/videos?";
+        const API_KEY = import.meta.env.VITE_KEY_USER;
+        const API_VIDEO = `${import.meta.env.VITE_API_URL}/youtube/v3/videos?`;
         const respuesta = await fetch(
           API_VIDEO +
             new URLSearchParams({
